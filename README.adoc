@@ -1,0 +1,11 @@
+= TOMUS
+William Noris
+2022
+
+Le jeu basé sur Motus.
+Devinez le mot en 10 essais. A chaque essais, le jeu vous indique si chaque lettre est bien placée ou non.
+
+== API public et gratuit de mots en français
+
+
+https://frenchwordsapi.herokuapp.com/api/Word/GetRandomWord?nbrWordsNeeded=1
