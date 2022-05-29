@@ -9,3 +9,18 @@ Devinez le mot en 10 essais. A chaque essais, le jeu vous indique si chaque lett
 
 
 https://frenchwordsapi.herokuapp.com/api/Word/GetRandomWord?nbrWordsNeeded=1
+
+== fichier texte contenant les mots du dictionnaire
+
+link:dico.txt[dictionnaire]
+
+ficher de lots en 5 lettres : 
+link:cinq.txt[]
+
+fichier de mots en 6 lettres :
+link:six.txt[]
+
+fichier de mots en 7 lettres :
+link:sept.txt[]
+
+
