@@ -6,6 +6,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
+import org.jboss.logging.Logger;
+
 import service.FiveLettersWordsService;
 import service.SevenLettersWordsService;
 import service.SixLettersWordsService;
@@ -22,9 +24,12 @@ public class WordsController {
     @Inject
     private SevenLettersWordsService sevenLettersWords;
 
+    private static final Logger LOG = Logger.getLogger(WordsController.class);
+
     @GET
     @Path("{numberOfLetters}/all")
     public Response getAll(@PathParam("numberOfLetters") int letters) {
+        LOG.info(String.format("All %s letters words requested", letters));
         switch (letters) {
             case 5:
                 return Response.ok(this.fiveLettersWords.getWords()).build();
@@ -41,6 +46,7 @@ public class WordsController {
     @GET
     @Path("{numberOfLetters}/rnd")
     public Response getOneRandom(@PathParam("numberOfLetters") int letters) {
+        LOG.info(String.format("Random %s letter word requested", letters));
         switch (letters) {
             case 5:
                 return Response.ok(this.fiveLettersWords.random()).build();
