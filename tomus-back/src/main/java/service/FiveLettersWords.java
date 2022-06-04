@@ -37,6 +37,16 @@ public class FiveLettersWords {
         this.words = words;
     }
 
+    /**
+     * get a random word from the words list
+     * 
+     * @return A 5 letters word
+     */
+    public String random() {
+        double rndNumber = Math.floor(Math.random() * this.words.length);
+        return this.words[(int) rndNumber];
+    }
+
     @Override
     public String toString() {
         var sb = new StringBuilder();
