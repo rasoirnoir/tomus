@@ -4,16 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import javax.enterprise.context.ApplicationScoped;
-
-@ApplicationScoped
-public class FiveLettersWords {
+public abstract class WordsService {
 
     private String[] words;
 
-    public FiveLettersWords() throws IOException {
-        System.out.println("Construction de la liste des mots de 5 lettres.");
-        var fileReader = new FileReader("cinq.txt");
+    public WordsService(String fileName) throws IOException {
+        var fileReader = new FileReader(fileName);
         var br = new BufferedReader(fileReader);
 
         int character;
