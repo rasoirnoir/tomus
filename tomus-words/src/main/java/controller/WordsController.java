@@ -16,13 +16,13 @@ import service.SixLettersWordsService;
 public class WordsController {
 
     @Inject
-    private FiveLettersWordsService fiveLettersWords;
+    protected FiveLettersWordsService fiveLettersWords;
 
     @Inject
-    private SixLettersWordsService sixLettersWords;
+    protected SixLettersWordsService sixLettersWords;
 
     @Inject
-    private SevenLettersWordsService sevenLettersWords;
+    protected SevenLettersWordsService sevenLettersWords;
 
     private static final Logger LOG = Logger.getLogger(WordsController.class);
 

@@ -1,0 +1,11 @@
+services:
+  words:
+    image: cactuspin/tomus-words
+    container_name: words_container
+    ports:
+      - 8080:8080
+    networks:
+      - tomus
+
+networks:
+  tomus: {}

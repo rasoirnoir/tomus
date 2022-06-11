@@ -6,10 +6,11 @@ import java.io.IOException;
 
 public abstract class WordsService {
 
-    private String[] words;
+    protected String[] words;
 
     public WordsService(String fileName) throws IOException {
-        var fileReader = new FileReader(fileName);
+
+        var fileReader = new FileReader("wordlists/" + fileName);
         var br = new BufferedReader(fileReader);
 
         int character;

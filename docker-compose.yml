@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    container_name: bdd
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: psswd
+    volumes:
+      - ./bdd/data:/var/lib/postgresql/data
+      - ./bdd/scripts:/docker-entrypoint-initdb.d
+    networks:
+      - tomus
+    ports:
+      - 5432:5432
+
+networks:
+  tomus:
