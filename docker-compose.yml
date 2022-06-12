@@ -17,5 +17,11 @@ services:
     ports:
       - 5432:5432
 
+  words:
+    image: cactuspin/tomus-words
+    container_name: tomus-words
+    networks:
+      - tomus
+
 networks:
   tomus:
