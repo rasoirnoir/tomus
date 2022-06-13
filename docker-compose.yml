@@ -20,6 +20,8 @@ services:
   words:
     image: cactuspin/tomus-words
     container_name: tomus-words
+    ports:
+      - 8080:8080
     networks:
       - tomus
 
