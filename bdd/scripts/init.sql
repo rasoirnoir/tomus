@@ -50,3 +50,8 @@ ALTER TABLE tomus.users_roles
 ADD CONSTRAINT FK_users_roles_1 FOREIGN KEY (user_id) REFERENCES tomus.users (id);
 ALTER TABLE tomus.users_roles
 ADD CONSTRAINT FK_users_roles_2 FOREIGN KEY (role_id) REFERENCES tomus.roles (id);
+-- INSERTS
+INSERT INTO tomus.roles (role)
+VALUES('PLAYER');
+INSERT INTO tomus.roles (role)
+VALUES('ADMIN');
